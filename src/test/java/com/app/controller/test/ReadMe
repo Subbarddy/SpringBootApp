@@ -1,0 +1,17 @@
+/*
+ * SpringJUnit4ClassRunner enables developers to implement integration tests for Spring components like controllers and repositories.
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+/*
+ * @WebMvcTest : for testing the controller layer and you need to provide
+ * remaining dependencies required using Mock Objects.
+ * 
+ * Means it wont load the hole Application Context it load only Controller and
+ * its required lock objects in Test case.
+ */
+@WebMvcTest(value = PersonController.class)
+
+@InjectMock
+/*
+  InjectMock Is used to instantiate Object of Testing class and inject in to TestClass. 
+*/
